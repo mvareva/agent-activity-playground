@@ -413,7 +413,7 @@ export default function Prototype() {
           .hfa-card-wrap{transition:box-shadow 150ms ease}
           [data-theme="dark"] .hfa-hover:hover{background:rgba(255,255,255,0.06)!important}
           [data-theme="light"] .hfa-hover:hover{background:#EAE9E5!important}
-          [data-theme="dark"] .hfa-card-btn:hover{background:rgba(255,255,255,0.04)!important}
+          [data-theme="dark"] .hfa-card-btn:hover{background:#393939!important}
           [data-theme="light"] .hfa-card-btn:hover{background:rgba(0,0,0,0.02)!important}
         }
       `}</style>
