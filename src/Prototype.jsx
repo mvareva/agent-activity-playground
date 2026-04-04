@@ -109,7 +109,7 @@ function StatsPanel({ t, dk }) {
               <img src={AVATARS[c.ava]} alt={c.name} style={{ width: 24, height: 24, borderRadius: "50%", flexShrink: 0, objectFit: "cover" }} />
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ fontSize: 14, fontWeight: 500, color: t.tx, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{c.name}</div>
-                <div style={{ fontSize: 13, color: t.mt, marginTop: 1 }}>{c.role} · {c.company}</div>
+                <div style={{ fontSize: 13, fontWeight: 450, lineHeight: 1.6, color: t.mt, marginTop: 1 }}>{c.role} · {c.company}</div>
               </div>
               <div style={{ fontSize: 12, fontWeight: 600, color: c.score >= 90 ? t.gn : c.score >= 80 ? t.am : t.sub, fontVariantNumeric: "tabular-nums" }}>{c.score}</div>
             </div>
@@ -149,7 +149,7 @@ function StatsPanel({ t, dk }) {
                     textDecoration: isDone ? "line-through" : "none",
                     transition: "color 150ms ease",
                   }}>{tk.title}</div>
-                  <div style={{ fontSize: 13, color: t.mt, marginTop: 1 }}>@{tk.assignee} · {tk.due}</div>
+                  <div style={{ fontSize: 13, fontWeight: 450, lineHeight: 1.6, color: t.mt, marginTop: 1 }}>@{tk.assignee} · {tk.due}</div>
                 </div>
                 <span style={chip(pc.bg, pc.c)}>{tk.priority}</span>
               </label>
@@ -166,17 +166,17 @@ function StatsPanel({ t, dk }) {
             <span style={{ fontSize: 14, fontWeight: 600, color: t.tx, fontVariantNumeric: "tabular-nums" }}>$420K</span>
           </div>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
-            <span style={{ fontSize: 13, color: t.mt }}>{DEAL.company}</span>
+            <span style={{ fontSize: 13, fontWeight: 450, lineHeight: 1.6, color: t.mt }}>{DEAL.company}</span>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
               <div style={{ width: 6, height: 6, borderRadius: "50%", background: STAGES[DEAL.stage].color, flexShrink: 0, position: "relative", top: 0.5 }} />
-              <span style={{ fontSize: 13, color: t.mt, letterSpacing: "0.01em" }}>{STAGES[DEAL.stage].label}</span>
+              <span style={{ fontSize: 13, fontWeight: 450, lineHeight: 1.6, color: t.mt, letterSpacing: "0.01em" }}>{STAGES[DEAL.stage].label}</span>
             </div>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 6 }}>
             <img src={AVATARS[0]} alt="Diana Flores" style={{ width: 24, height: 24, borderRadius: "50%", objectFit: "cover" }} />
-            <span style={{ fontSize: 13, color: t.mt }}>{DEAL.contact}</span>
-            <span style={{ fontSize: 13, color: t.mt, opacity: 0.4 }}>·</span>
-            <span style={{ fontSize: 13, color: t.mt, fontVariantNumeric: "tabular-nums" }}>{DEAL.closeDate}</span>
+            <span style={{ fontSize: 13, fontWeight: 450, lineHeight: 1.6, color: t.mt }}>{DEAL.contact}</span>
+            <span style={{ fontSize: 13, fontWeight: 450, lineHeight: 1.6, color: t.mt, opacity: 0.4 }}>·</span>
+            <span style={{ fontSize: 13, fontWeight: 450, lineHeight: 1.6, color: t.mt, fontVariantNumeric: "tabular-nums" }}>{DEAL.closeDate}</span>
             <span style={{ marginLeft: "auto", ...chip(PRI_C[DEAL.priority].bg, PRI_C[DEAL.priority].c) }}>{DEAL.priority}</span>
           </div>
         </div>
@@ -251,8 +251,8 @@ function StreamingText({ text, active, t }) {
   const cursorOn = active && (!done || showCursor);
 
   return (
-    <pre style={{fontFamily:"monospace",fontSize:12,lineHeight:1.7,background:t.code,color:t.sub,padding:16,borderRadius:12,margin:0,whiteSpace:"pre-wrap",overflowWrap:"break-word",maxHeight:200,overflowY:"auto",boxShadow:`inset 0 0 0 0.5px ${t.bd}`}}>
-      {content}{cursorOn && <span className="_cursor" style={{color:t.ac,marginLeft:2,fontWeight:500,fontSize:12,lineHeight:0,animation:done ? "none" : "_blink 900ms step-end infinite"}}>▍</span>}
+    <pre style={{fontFamily:"monospace",fontSize:13,lineHeight:1.6,background:t.code,color:t.sub,padding:16,borderRadius:12,margin:0,whiteSpace:"pre-wrap",overflowWrap:"break-word",maxHeight:200,overflowY:"auto",boxShadow:`inset 0 0 0 0.5px ${t.bd}`}}>
+      {content}{cursorOn && <span className="_cursor" style={{color:t.ac,marginLeft:2,fontWeight:500,fontSize:13,lineHeight:0,animation:done ? "none" : "_blink 900ms step-end infinite"}}>▍</span>}
     </pre>
   );
 }
@@ -283,7 +283,7 @@ function Card({ item, t, initOpen, dk }) {
                 <span style={{padding:"5px 9px",borderRadius:8,fontSize:12,fontWeight:500,background:"rgba(59,130,246,0.2)",color:"#60A5FA",lineHeight:"16px"}}>High-priority</span>
                 <span style={{padding:"5px 9px",borderRadius:8,fontSize:12,fontWeight:500,boxShadow:`0 0 0 1px ${t.bd}`,color:t.sub,lineHeight:"16px"}}>Enterprise</span>
               </div>
-              <p style={{margin:0,marginTop:16,fontSize:13,lineHeight:1.6,color:t.mt}}>Lead score 95. Engaged with enterprise pricing 3× this week. Schedule demo on AI workflow automation for telecom. Assigned to <strong style={{color:t.sub}}>@alex</strong>.</p>
+              <p style={{margin:0,marginTop:16,fontSize:13,fontWeight:450,lineHeight:1.6,color:t.mt}}>Lead score 95. Engaged with enterprise pricing 3× this week. Schedule demo on AI workflow automation for telecom. Assigned to <strong style={{color:t.sub,fontWeight:600}}>@alex</strong>.</p>
               {item.reversible && <div style={{marginTop:16}}><RevertLink t={t} /></div>}
             </div>
           ) : item.type === "stats" ? (
@@ -292,7 +292,7 @@ function Card({ item, t, initOpen, dk }) {
             <StreamingText text={item.body} active={open} t={t} />
           ) : (
             <div style={{display:"flex",flexDirection:"column",gap:16}}>
-              <pre style={{fontFamily:"monospace",fontSize:12,lineHeight:1.7,background:t.code,color:t.sub,padding:16,borderRadius:12,margin:0,whiteSpace:"pre-wrap",overflowWrap:"break-word",maxHeight:200,overflowY:"auto",boxShadow:`inset 0 0 0 0.5px ${t.bd}`}}>{item.body}</pre>
+              <pre style={{fontFamily:"monospace",fontSize:13,lineHeight:1.6,background:t.code,color:t.sub,padding:16,borderRadius:12,margin:0,whiteSpace:"pre-wrap",overflowWrap:"break-word",maxHeight:200,overflowY:"auto",boxShadow:`inset 0 0 0 0.5px ${t.bd}`}}>{item.body}</pre>
               {item.reversible && <RevertLink t={t} />}
             </div>
           )}
