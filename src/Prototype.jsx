@@ -125,7 +125,7 @@ function StatsPanel({ t, dk }) {
             const isDone = checked[tk.title];
             return (
               <label key={tk.title} className="hfa-hover" style={{
-                display: "flex", alignItems: "center", gap: 8, padding: "12px 16px",
+                display: "flex", alignItems: "center", gap: 10, padding: "12px 16px",
                 borderRadius: 12, background: t.code, cursor: "pointer",
                 transition: "background-color 150ms ease",
               }}>
