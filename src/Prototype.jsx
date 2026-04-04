@@ -32,8 +32,8 @@ const ITEMS = [
   {id:3,icon:"brain",label:"Reasoning",cat:"think",sum:"Found 3 high-value contacts from Verizon — creating tasks…",time:"1.8s",
     body:"Contacts with enterprise-tier potential:\n— Sarah Chen (VP Eng) — score: 92\n— Marcus Webb (Procurement) — score: 87\n— Diana Flores (CTO) — score: 95\n\nAll three exceed the 85-point threshold for immediate outreach."},
   {id:4,icon:"ticket",label:"Created task",cat:"action",sum:"Follow up with Diana Flores (CTO, Verizon)",time:"0.4s",type:"rich",reversible:true,initOpen:true},
-  {id:5,icon:"edit",label:"Updated",cat:"action",sum:<span style={{display:"inline-flex",alignItems:"center"}}>Deal stage: Verizon Enterprise<svg width="10" height="10" viewBox="0 0 19.38 15.75" fill="currentColor" style={{flexShrink:0,opacity:0.4,margin:"0 8px"}}><path d="M11.23 15.68c.35 0 .69-.15.99-.44l6.37-6.35c.27-.26.43-.66.43-1.04 0-.39-.16-.78-.43-1.05L12.23.45C11.92.15 11.58 0 11.23 0c-.83 0-1.39.58-1.39 1.34 0 .43.18.75.44 1.01l2.19 2.2 3.55 3.29-3.55 3.29-2.19 2.19c-.26.25-.44.59-.44 1.01 0 .77.56 1.34 1.39 1.34zM1.46 9.26h11.04l3.79-.21c.76-.04 1.27-.49 1.27-1.21 0-.72-.51-1.17-1.27-1.21l-3.79-.21H1.46C.59 6.43 0 7 0 7.84c0 .85.59 1.42 1.46 1.42z"/></svg>Qualification</span>,time:"0.3s",reversible:true,
-    body:'PATCH /api/v1/deals/vz-enterprise-2024\n{\n  "stage": "qualification",\n  "expected_value": 420000\n}\nStatus: 200 OK'},
+  {id:5,icon:"edit",label:"Updated",cat:"action",sum:<span style={{display:"inline-flex",alignItems:"center"}}>Deal stage: Verizon Enterprise<svg width="10" height="10" viewBox="0 0 19.38 15.75" fill="currentColor" style={{flexShrink:0,opacity:0.4,margin:"0 8px"}}><path d="M11.23 15.68c.35 0 .69-.15.99-.44l6.37-6.35c.27-.26.43-.66.43-1.04 0-.39-.16-.78-.43-1.05L12.23.45C11.92.15 11.58 0 11.23 0c-.83 0-1.39.58-1.39 1.34 0 .43.18.75.44 1.01l2.19 2.2 3.55 3.29-3.55 3.29-2.19 2.19c-.26.25-.44.59-.44 1.01 0 .77.56 1.34 1.39 1.34zM1.46 9.26h11.04l3.79-.21c.76-.04 1.27-.49 1.27-1.21 0-.72-.51-1.17-1.27-1.21l-3.79-.21H1.46C.59 6.43 0 7 0 7.84c0 .85.59 1.42 1.46 1.42z"/></svg>Negotiation</span>,time:"0.3s",reversible:true,
+    body:'PATCH /api/v1/deals/vz-enterprise-2024\n{\n  "stage": "negotiation",\n  "expected_value": 420000\n}\nStatus: 200 OK'},
   {id:6,icon:"sparkle",label:"Summary",cat:"think",sum:"Agent run complete — 10 synced, 3 tasks, 1 deal updated",time:"8.0s",type:"stats",initOpen:true},
 ];
 
@@ -69,7 +69,7 @@ const TASKS = [
   { title: "Send proposal to Sarah Chen", assignee: "maria", due: "Tomorrow", priority: "Medium" },
   { title: "Schedule demo for Marcus Webb", assignee: "alex", due: "Apr 3", priority: "High" },
 ];
-const DEAL = { name: "Verizon Enterprise", company: "Verizon Corp", value: 420000, contact: "Diana Flores", stage: "qualification", closeDate: "Apr 15", priority: "High" };
+const DEAL = { name: "Verizon Enterprise", company: "Verizon Corp", value: 420000, contact: "Diana Flores", stage: "negotiation", closeDate: "Apr 15", priority: "High" };
 const STAGES = { prospecting: { color: "#3B82F6", label: "Prospecting" }, qualification: { color: "#EAB308", label: "Qualification" }, proposal: { color: "#A855F7", label: "Proposal" }, negotiation: { color: "#F97316", label: "Negotiation" }, "closed-won": { color: "#22C55E", label: "Closed Won" } };
 const PRI_C = { Critical: { bg: "rgba(239,68,68,0.2)", c: "#F87171" }, High: { bg: "rgba(59,130,246,0.2)", c: "#60A5FA" }, Medium: { bg: "rgba(202,138,4,0.15)", c: "#ca8a04" }, Low: { bg: "rgba(255,255,255,0.06)", c: "rgba(235,235,245,0.4)" } };
 
