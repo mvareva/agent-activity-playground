@@ -272,7 +272,6 @@ function Card({ item, t, initOpen, dk }) {
           <span style={{color:t.tx,fontWeight:500}}>{item.label}</span>
         </span>
         <span style={{fontWeight:500,color:t.sub,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap",minWidth:0,flex:1}}>{item.sum}</span>
-        <span style={{color:t.mt,fontSize:11,flexShrink:0,fontVariantNumeric:"tabular-nums",fontFamily:"monospace"}}>{item.time}</span>
       </button>
       <div style={{display:"grid",gridTemplateRows:open ? "1fr" : "0fr",transition:"grid-template-rows 250ms cubic-bezier(0.165,0.84,0.44,1)"}}>
         <div style={{overflow:"hidden"}}>
