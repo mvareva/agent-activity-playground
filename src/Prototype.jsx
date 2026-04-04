@@ -96,7 +96,7 @@ function StatsPanel({ t, dk }) {
           }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 32, height: 32, borderRadius: 10, background: s.bg }}>{ic[ICON_KEY[s.icon]](s.c)}</div>
             <div style={{ fontSize: 24, fontWeight: 600, color: t.tx, fontVariantNumeric: "tabular-nums", letterSpacing: "-0.07em", lineHeight: "28px", marginTop: 34 }}>{s.n}</div>
-            <div style={{ fontSize: 13, color: t.sub, marginTop: 6 }}>{s.l}</div>
+            <div style={{ fontSize: 12, color: t.sub, marginTop: 6 }}>{s.l}</div>
           </button>
         ))}
       </div>
