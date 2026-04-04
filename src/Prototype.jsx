@@ -277,14 +277,14 @@ function Card({ item, t, initOpen, dk }) {
         <div style={{overflow:"hidden"}}>
           <div style={{padding:16,fontSize:13,lineHeight:1.5,color:t.sub,opacity:open ? 1 : 0,transition:"opacity 150ms cubic-bezier(0.165,0.84,0.44,1)"}}>
           {item.type === "rich" ? (
-            <div style={{display:"flex",flexDirection:"column",gap:12}}>
-              <div style={{fontSize:13,fontWeight:600,color:t.tx}}>Enterprise outreach: Verizon CTO — Diana Flores</div>
-              <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
+            <div style={{display:"flex",flexDirection:"column",gap:0}}>
+              <div style={{fontSize:14,fontWeight:600,color:t.tx,lineHeight:1.4}}>Enterprise outreach: Verizon CTO — Diana Flores</div>
+              <div style={{display:"flex",gap:8,flexWrap:"wrap",marginTop:10}}>
                 <span style={{padding:"5px 9px",borderRadius:8,fontSize:12,fontWeight:500,background:"rgba(59,130,246,0.2)",color:"#60A5FA",lineHeight:"16px"}}>High-priority</span>
                 <span style={{padding:"5px 9px",borderRadius:8,fontSize:12,fontWeight:500,boxShadow:`0 0 0 1px ${t.bd}`,color:t.sub,lineHeight:"16px"}}>Enterprise</span>
               </div>
-              <p style={{margin:0}}>Lead score 95. Engaged with enterprise pricing 3× this week. Schedule demo on AI workflow automation for telecom. Assigned to <strong style={{color:t.sub}}>@alex</strong>.</p>
-              {item.reversible && <RevertLink t={t} />}
+              <p style={{margin:0,marginTop:16,fontSize:13,lineHeight:1.6,color:t.mt}}>Lead score 95. Engaged with enterprise pricing 3× this week. Schedule demo on AI workflow automation for telecom. Assigned to <strong style={{color:t.sub}}>@alex</strong>.</p>
+              {item.reversible && <div style={{marginTop:16}}><RevertLink t={t} /></div>}
             </div>
           ) : item.type === "stats" ? (
             <StatsPanel t={t} dk={dk} />
