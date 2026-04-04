@@ -6,6 +6,7 @@ A design engineering prototype exploring how an AI CRM agent shows its work — 
 
 ## Features
 
+- Streaming thinking trace — reasoning cards type out character-by-character with a blinking cursor
 - Staggered real-time card loading with CSS grid transitions
 - Interactive summary cards with expandable contact, task, and deal detail views
 - Fully responsive (480px → 2-col stats, 360px → 1-col, touch-optimized)
@@ -17,10 +18,6 @@ A design engineering prototype exploring how an AI CRM agent shows its work — 
 ## Stack
 
 React · Vite · Inline styles + scoped CSS · SF Pro icons (inline SVG)
-
-## Web Prototype
-
-https://mvareva.github.io/agent-activity-playground/
 
 ## License
 
