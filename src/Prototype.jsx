@@ -478,7 +478,7 @@ export default function Prototype() {
       {/* ── Feed ── */}
       <div ref={scrollRef} className="hfa-responsive" style={{padding:"18px 20px",display:"flex",flexDirection:"column",gap:8}}>
         {filtered.map(item => (
-          <div key={item.id} className="hc">
+          <div key={item.id} className={done ? "" : "hc"}>
             <Card item={item} t={t} dk={dk} initOpen={item.initOpen} />
           </div>
         ))}
