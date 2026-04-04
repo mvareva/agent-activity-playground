@@ -19,6 +19,10 @@ A design engineering prototype exploring how an AI CRM agent shows its work — 
 
 React · Vite · Inline styles + scoped CSS · SF Pro icons (inline SVG)
 
+## Live Demo
+
+https://mvareva.github.io/agent-activity-playground/
+
 ## License
 
 MIT
