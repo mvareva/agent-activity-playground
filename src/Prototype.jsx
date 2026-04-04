@@ -442,7 +442,7 @@ export default function Prototype() {
       </div>
 
       {/* ── Panel ── */}
-      <div style={{width:"100%",maxWidth:590,background:t.bg,borderRadius:16,boxShadow:`0 0 0 0.5px ${t.bd}, 0 4px 24px rgba(0,0,0,0.2)`,overflow:"hidden",transition:"background-color 300ms ease,box-shadow 300ms ease"}}>
+      <div style={{width:"100%",maxWidth:520,background:t.bg,borderRadius:16,boxShadow:`0 0 0 0.5px ${t.bd}, 0 4px 24px rgba(0,0,0,0.2)`,overflow:"hidden",transition:"background-color 300ms ease,box-shadow 300ms ease"}}>
 
       {/* ── Header ── */}
       <div style={{zIndex:50,background:t.bg,borderBottom:`0.5px solid ${t.bd}`,transition:"background-color 300ms ease"}}>
