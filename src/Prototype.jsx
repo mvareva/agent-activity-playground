@@ -174,9 +174,9 @@ function StatsPanel({ t, dk }) {
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 6 }}>
             <img src={AVATARS[0]} alt="Diana Flores" style={{ width: 24, height: 24, borderRadius: "50%", objectFit: "cover", background: t.codeSelected }} />
-            <span style={{ fontSize: 13, color: t.mt }}>{DEAL.contact}</span>
-            <span style={{ fontSize: 13, color: t.mt, opacity: 0.4 }}>·</span>
-            <span style={{ fontSize: 13, color: t.mt, fontVariantNumeric: "tabular-nums" }}>{DEAL.closeDate}</span>
+            <span style={{ fontSize: 14, color: t.mt }}>{DEAL.contact}</span>
+            <span style={{ fontSize: 14, color: t.mt, opacity: 0.4 }}>·</span>
+            <span style={{ fontSize: 14, color: t.mt, fontVariantNumeric: "tabular-nums" }}>{DEAL.closeDate}</span>
             <span style={{ marginLeft: "auto", ...chip(PRI_C[DEAL.priority].bg, PRI_C[DEAL.priority].c) }}>{DEAL.priority}</span>
           </div>
         </div>
