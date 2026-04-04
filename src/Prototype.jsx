@@ -426,7 +426,7 @@ export default function Prototype() {
           className="hfa-btn-primary"
           style={{
             display:"flex",alignItems:"center",justifyContent:"center",
-            padding:"10px 16px",borderRadius:12,border:"none",
+            padding:"12px 16px",borderRadius:12,border:"none",
             background:done || vis.length === 0 ? t.pOn : t.sf,
             color:done || vis.length === 0 ? t.pOT : t.mt,
             fontSize:13,fontWeight:600,fontFamily:"inherit",
