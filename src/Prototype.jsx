@@ -39,7 +39,7 @@ const ITEMS = [
 
 /* ── Themes ── */
 const TH = {
-  dark:{bg:"#1E1E1E",sf:"#282828",code:"rgba(255,255,255,0.03)",codeSolid:"#2C2C2C",codeSelected:"#383838",tx:"#fff",sub:"rgba(235,235,245,0.6)",mt:"#929199",bd:"rgba(84,84,88,0.25)",ac:"#D47958",gn:"#4ade80",gnBg:"rgba(74,222,128,0.1)",am:"#fbbf24",pOn:"#fff",pOT:"#1a1a1a",pOf:"rgba(235,235,245,0.45)",tb:"rgba(255,255,255,0.06)",sh:"rgba(0,0,0,0.3)"},
+  dark:{bg:"#1E1E1E",sf:"#282828",code:"rgba(255,255,255,0.03)",codeSolid:"#2C2C2C",codeSelected:"#383838",tx:"#EBEBEB",sub:"rgba(235,235,245,0.6)",mt:"#929199",bd:"rgba(84,84,88,0.25)",ac:"#D47958",gn:"#4ade80",gnBg:"rgba(74,222,128,0.1)",am:"#fbbf24",pOn:"#EBEBEB",pOT:"#1a1a1a",pOf:"rgba(235,235,245,0.45)",tb:"rgba(255,255,255,0.06)",sh:"rgba(0,0,0,0.3)"},
   light:{bg:"#f4f3ef",sf:"#fff",code:"#f5f5f2",codeSolid:"#f5f5f2",codeSelected:"#eae9e5",tx:"#1a1a1a",sub:"#6b6b6b",mt:"#999",bd:"rgba(0,0,0,0.06)",ac:"#D47958",gn:"#16a34a",gnBg:"rgba(22,163,74,0.12)",am:"#b49309",pOn:"#1a1a1a",pOT:"#fff",pOf:"#888",tb:"rgba(0,0,0,0.04)",sh:"rgba(0,0,0,0.04)"},
 };
 
@@ -103,7 +103,7 @@ function StatsPanel({ t, dk }) {
 
       {/* Contacts */}
       {expanded === "contacts" && (
-        <div className="hx" style={{ display: "flex", flexDirection: "column", gap: 8, maxHeight: 300, overflowY: "auto", marginRight: -16, paddingRight: 16 }}>
+        <div className="hx" style={{ display: "flex", flexDirection: "column", gap: 8, maxHeight: 290, overflowY: "auto", marginRight: -16, paddingRight: 16 }}>
           {CONTACTS.map(c => (
             <div key={c.name} className="hfa-hover" style={{ display: "flex", alignItems: "center", gap: 8, padding: "12px 16px", borderRadius: 12, background: t.code, cursor: "pointer", transition: "background-color 150ms ease" }}>
               <img src={AVATARS[c.ava]} alt={c.name} style={{ width: 24, height: 24, borderRadius: "50%", flexShrink: 0, objectFit: "cover" }} />
