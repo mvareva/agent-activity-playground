@@ -39,7 +39,7 @@ const ITEMS = [
 
 /* ── Themes ── */
 const TH = {
-  dark:{bg:"#262526",sf:"#313131",code:"rgba(255,255,255,0.04)",codeSolid:"#353535",codeSelected:"#434343",tx:"#fff",sub:"rgba(235,235,245,0.6)",mt:"#929199",bd:"rgba(84,84,88,0.25)",ac:"#D47958",gn:"#4ade80",gnBg:"rgba(74,222,128,0.1)",am:"#fbbf24",pOn:"#fff",pOT:"#1a1a1a",pOf:"rgba(235,235,245,0.45)",tb:"rgba(255,255,255,0.06)",sh:"rgba(0,0,0,0.3)"},
+  dark:{bg:"#262526",sf:"#313131",code:"rgba(255,255,255,0.04)",codeSolid:"#353535",codeSelected:"#393939",tx:"#fff",sub:"rgba(235,235,245,0.6)",mt:"#929199",bd:"rgba(84,84,88,0.25)",ac:"#D47958",gn:"#4ade80",gnBg:"rgba(74,222,128,0.1)",am:"#fbbf24",pOn:"#fff",pOT:"#1a1a1a",pOf:"rgba(235,235,245,0.45)",tb:"rgba(255,255,255,0.06)",sh:"rgba(0,0,0,0.3)"},
   light:{bg:"#f4f3ef",sf:"#fff",code:"#f5f5f2",codeSolid:"#f5f5f2",codeSelected:"#eae9e5",tx:"#1a1a1a",sub:"#6b6b6b",mt:"#999",bd:"rgba(0,0,0,0.06)",ac:"#D47958",gn:"#16a34a",gnBg:"rgba(22,163,74,0.12)",am:"#b49309",pOn:"#1a1a1a",pOT:"#fff",pOf:"#888",tb:"rgba(0,0,0,0.04)",sh:"rgba(0,0,0,0.04)"},
 };
 
