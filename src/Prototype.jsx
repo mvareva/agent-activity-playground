@@ -277,7 +277,7 @@ function Card({ item, t, initOpen, dk }) {
   return (
     <div className="hfa-card-wrap" style={{background:t.sf,borderRadius:12,overflow:"hidden"}}>
       <button onClick={() => setOpen(o => !o)} aria-expanded={open} className="hfa-card-btn" style={{display:"flex",alignItems:"center",gap:8,width:"100%",padding:"14px 16px",border:"none",background:"transparent",cursor:"pointer",textAlign:"left",fontSize:13,color:t.tx,minHeight:52,fontFamily:"inherit",transition:"background-color 150ms ease"}}>
-        <span style={{display:"inline-flex",alignItems:"center",gap:12,flexShrink:0}}>
+        <span style={{display:"inline-flex",alignItems:"center",gap:10,flexShrink:0}}>
           <span style={{display:"flex",alignItems:"center",justifyContent:"center",width:32,height:32,borderRadius:10,background:itemBg(item,dk)}}>{iconFn ? iconFn(col) : ic.spark(col)}</span>
           <span style={{color:t.tx,fontWeight:500}}>{item.label}</span>
         </span>
