@@ -382,7 +382,7 @@ export default function Prototype() {
         @keyframes _ci{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
         @keyframes _ex{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
         @keyframes _si{from{opacity:0;transform:scale(0.92)}to{opacity:1;transform:scale(1)}}
-        @keyframes _dot{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}}
+        @keyframes _dot{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-4px)}}
         @keyframes _spin{to{transform:rotate(360deg)}}
         @keyframes _blink{0%,100%{opacity:1}50%{opacity:0}}
         @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
@@ -495,7 +495,7 @@ export default function Prototype() {
         {!done && (
           <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:6,padding:"20px 0"}}>
             {[0,1,2].map(i => (
-              <div key={i} style={{width:4,height:4,borderRadius:"50%",background:t.mt,animation:`_dot 1s ease-in-out ${i * 0.15}s infinite`}} />
+              <div key={i} style={{width:4,height:4,borderRadius:"50%",background:t.mt,animation:`_dot 0.7s ease-in-out ${i * 0.12}s infinite`}} />
             ))}
           </div>
         )}
