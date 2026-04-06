@@ -493,9 +493,9 @@ export default function Prototype() {
           </div>
         ))}
         {!done && (
-          <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:8,padding:"20px 0"}}>
+          <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:6,padding:"20px 0"}}>
             {[0,1,2].map(i => (
-              <div key={i} style={{width:5,height:5,borderRadius:"50%",background:t.mt,animation:`_dot 1s ease-in-out ${i * 0.15}s infinite`}} />
+              <div key={i} style={{width:4,height:4,borderRadius:"50%",background:t.mt,animation:`_dot 1s ease-in-out ${i * 0.15}s infinite`}} />
             ))}
           </div>
         )}
