@@ -375,6 +375,7 @@ export default function Prototype() {
   return (
     <div data-theme={dk ? "dark" : "light"} style={{fontFamily:"-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif",background:t.bg,minHeight:"100vh",color:t.tx,fontSize:14,transition:"background-color 350ms ease, color 250ms ease",WebkitFontSmoothing:"antialiased",MozOsxFontSmoothing:"grayscale",display:"flex",alignItems:"flex-start",justifyContent:"center",padding:"74px 16px"}}>
       <style>{`
+        html,body{background:#1E1E1E;margin:0}
         .hc{animation:_ci 320ms cubic-bezier(.165,.84,.44,1) both}
         .hx{animation:_ex 280ms cubic-bezier(0.34,1.56,0.64,1) both}
         .hf{animation:_ex 300ms cubic-bezier(.23,1,.32,1) 200ms both}
