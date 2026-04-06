@@ -276,12 +276,12 @@ function Card({ item, t, initOpen, dk }) {
 
   return (
     <div className="hfa-card-wrap" style={{background:t.sf,borderRadius:12,overflow:"hidden"}}>
-      <button onClick={() => setOpen(o => !o)} aria-expanded={open} className="hfa-card-btn" style={{display:"flex",alignItems:"center",gap:8,width:"100%",padding:"14px 16px",border:"none",background:"transparent",cursor:"pointer",textAlign:"left",fontSize:13,color:t.tx,minHeight:52,fontFamily:"inherit",transition:"background-color 150ms ease"}}>
+      <button onClick={() => setOpen(o => !o)} aria-expanded={open} className="hfa-card-btn" style={{display:"flex",alignItems:"center",gap:8,width:"100%",padding:"14px 16px",border:"none",background:"transparent",cursor:"pointer",textAlign:"left",fontSize:13,color:t.tx,minHeight:52,fontFamily:"inherit",transition:"background-color 150ms ease",overflowX:"auto",WebkitOverflowScrolling:"touch"}}>
         <span style={{display:"inline-flex",alignItems:"center",gap:10,flexShrink:0}}>
-          <span className="hfa-icon-box" style={{display:"flex",alignItems:"center",justifyContent:"center",width:30,height:30,borderRadius:10,background:itemBg(item,dk)}}>{iconFn ? iconFn(col) : ic.spark(col)}</span>
-          <span style={{color:t.tx,fontWeight:500}}>{item.label}</span>
+          <span style={{display:"flex",alignItems:"center",justifyContent:"center",width:30,height:30,borderRadius:10,background:itemBg(item,dk)}}>{iconFn ? iconFn(col) : ic.spark(col)}</span>
+          <span style={{color:t.tx,fontWeight:500,whiteSpace:"nowrap"}}>{item.label}</span>
         </span>
-        <span style={{fontWeight:500,color:t.sub,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap",minWidth:0,flex:1}}>{item.sum}</span>
+        <span style={{fontWeight:500,color:t.sub,whiteSpace:"nowrap",minWidth:0,flex:1}}>{item.sum}</span>
       </button>
       <div style={{display:"grid",gridTemplateRows:open ? "1fr" : "0fr",transition:"grid-template-rows 250ms cubic-bezier(0.165,0.84,0.44,1)"}}>
         <div style={{overflow:"hidden"}}>
@@ -390,13 +390,14 @@ export default function Prototype() {
         @media(max-width:480px){
           .hfa-responsive{padding-left:14px!important;padding-right:14px!important}
           .hfa-stats-grid{grid-template-columns:1fr 1fr!important}
-          .hfa-icon-box{display:none!important}
         }
         @media(max-width:360px){
           .hfa-stats-grid{grid-template-columns:1fr!important}
           .hfa-responsive{padding-left:12px!important;padding-right:12px!important}
         }
 
+        .hfa-card-btn::-webkit-scrollbar{display:none}
+        .hfa-card-btn{-ms-overflow-style:none;scrollbar-width:none}
         /* Focus ring — keyboard Tab only (#7D7471) */
         button:focus-visible:not(:hover){outline:1px solid #7D7471;outline-offset:2px;border-radius:8px;box-shadow:0 0 0 4px rgba(125,116,113,0.1)}
         button:focus-visible:hover{outline:none;box-shadow:none}
