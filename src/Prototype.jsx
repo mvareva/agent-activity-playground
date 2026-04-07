@@ -458,7 +458,7 @@ export default function Prototype() {
       {/* ── Header ── */}
       <div style={{zIndex:50,background:t.bg,borderBottom:`0.5px solid ${t.bd}`,transition:"background-color 300ms ease"}}>
         <div className="hfa-responsive" style={{padding:"20px 20px 18px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-          <div style={{display:"flex",alignItems:"center",gap:8}}>
+          <div style={{display:"flex",alignItems:"center",gap:6}}>
             <span style={{display:"inline-flex",alignItems:"center",gap:8,padding:"5px 11px",borderRadius:8,fontSize:12,fontWeight:500,background:done?t.gnBg:"rgba(255,108,53,0.12)",color:done?t.gn:"#FF6C35"}}>
               {done ? <span style={{width:6,height:6,borderRadius:"50%",background:t.gn}}/> : ic.spin("#FF6C35")}
               {done ? "Completed" : "Running…"}
